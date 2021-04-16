@@ -1,0 +1,45 @@
+.container {
+	max-width: 35rem;
+	margin: 2rem auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.header{
+	background-color: #fafafa;
+}
+
+
+.iconbutton_on{
+	background-color:rgba(255,255,255,0);
+	border-style: none;
+	color:rgba(0,0,0,1);
+}
+
+.iconbutton_off{
+	background-color:rgba(0,0,0,0);
+	border-style: none;
+	color:rgba(0,0,0,0.4);
+	opacity: 0.5;
+}
+
+
+.count_good{
+	color: red
+}
+
+.count_bad{
+	color: blue;
+}
+
+.count_off{
+	color: gray;
+}
+
+@media screen and (max-width: 500px) {
+	.table td, .table th{
+		padding: .5rem .2rem .5rem .2rem;
+	}
+}

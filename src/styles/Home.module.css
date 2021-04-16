@@ -1,0 +1,297 @@
+.container {
+  min-height: 100vh;
+  padding: 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  padding: 5rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  width: 100%;
+  height: 100px;
+  border-top: 1px solid #eaeaea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer img {
+  margin-left: 0.5rem;
+}
+
+.footer a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title a {
+  color: #0070f3;
+  text-decoration: none;
+}
+
+.title a:hover,
+.title a:focus,
+.title a:active {
+  text-decoration: underline;
+}
+
+.title {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 4rem;
+}
+
+.title,
+.description {
+  text-align: center;
+}
+
+.description {
+  line-height: 1.5;
+  font-size: 1.5rem;
+}
+
+.code {
+  background: #fafafa;
+  border-radius: 5px;
+  padding: 0.75rem;
+  font-size: 1.1rem;
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+    Bitstream Vera Sans Mono, Courier New, monospace;
+}
+
+.grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 800px;
+  margin-top: 3rem;
+}
+
+.card {
+  margin: 1rem;
+  flex-basis: 45%;
+  padding: 1.5rem;
+  text-align: left;
+  color: inherit;
+  text-decoration: none;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.card:hover,
+.card:focus,
+.card:active {
+  color: #0070f3;
+  border-color: #0070f3;
+}
+
+.card h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+}
+
+.card p {
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+.logo {
+  height: 1em;
+}
+
+@media (max-width: 600px) {
+  .grid {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  height: 0;
+  visibility: hidden;
+}
+
+/******* 地図成形 *******/
+.japan_map div div.area div {
+	border: 1px #ffffff solid;
+	text-align: center;
+	font-size: 14px;
+ 	display: flex;
+		display: -webkit-flex;
+ 	align-items: center; /* 縦方向中央揃え */
+ 		-webkit-align-items: center; /* 縦方向中央揃え（Safari用） */
+ 	justify-content: center; /* 横方向中央揃え */
+ 		-webkit-justify-content: center; /* 横方向中央揃え（Safari用） */
+	border-radius: 6px;
+		-webkit-border-radius: 6px;
+	position: absolute;
+	box-sizing: border-box;
+	transition: 0.2s;
+}
+.japan_map div div.area div:hover {
+	opacity: 0.5;
+	transition: 0.2s;
+}
+
+.japan_map {
+	display: block;
+	width: 777px;
+	height: 482px;
+	background-color: none;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+}
+.japan_map p.area_title {
+	display: none;
+}
+
+
+/* 近畿 */
+
+.kinki {
+	width: 186px;
+	height: 211px;
+	position: absolute;
+	left: 320px;
+	top: 223px;
+}
+.kinki div.area div {
+	background-color: #b0b72f;
+	color: #ffffff;
+}
+
+.kyoto {
+	width: 67px;
+	height: 84px;
+	left: 51px;
+}
+.shiga {
+	width: 68px;
+	height: 42px;
+	top: 42px;
+	left: 118px;
+}
+.osaka {
+	width: 67px;
+	height: 85px;
+	top: 84px;
+	left: 51px;
+}
+.nara {
+	width: 34px;
+	height: 85px;
+	top: 84px;
+	left: 118px;
+}
+.mie {
+	width: 34px;
+	height: 85px;
+	top: 84px;
+	left: 152px;
+}
+.wakayama {
+	width: 113px;
+	height: 42px;
+	top: 169px;
+	left: 61px;
+}
+.hyougo {
+	width: 51px;
+	height: 98px;
+	left: 0px;
+}
+
+
+
+/****************************************
+	レスポンシブ
+
+****************************************/
+
+	.japan_map {
+		display: flex;
+		width: 100%;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+	.japan_map p.area_title {
+		display: inline-block;
+		width: 100%;
+		font-size: 15px;
+		text-align: center;
+		margin-top: 1.5em;
+		margin-bottom: 1em;
+		color: #000000;
+	}
+	.hokkaido_touhoku, .kantou, .tyubu, .kinki, .tyugoku, .shikoku, .kyusyu {
+		display: block;
+		position: static;
+		margin: 0 1em 0 1em;
+	}
+	.japan_map div div.area {
+		display: block;
+		position: relative;
+	}
+
+
+	.kinki {
+		height: calc(211px + 4.5em);
+	}
+/* レスポンシブ max-776px */
+
+
+
+@media screen and (max-width: 500px) {
+	.japan_map {
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+	.hokkaido_touhoku, .kantou, .tyubu, .kinki, .tyugoku, .shikoku, .kyusyu {
+		display: flex;
+		flex-wrap: wrap;
+		width: 100%;
+		height: auto;
+		position: static;
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+	.japan_map div div.area {
+		font-size: 14px;
+		display: flex;
+		flex-wrap: wrap;
+		width: 100%;
+	}
+	.japan_map div div.area a {
+		height: auto;
+		width: 25%;
+	}
+	.japan_map div div.area div {
+		display: block;
+		border-radius: 0px;
+		position: static;
+		height: auto;
+		font-size: 16px;
+		width: 100%;
+		padding: 0.5em 0.3em 0.5em 0.3em;
+	}
+} /* レスポンシブ max-500px */
